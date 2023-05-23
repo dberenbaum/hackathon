@@ -2,14 +2,14 @@ plots:
     - mispredicted
     - loss:
         y:
-          evaluation/plots/metrics/train/loss.tsv: loss
-          evaluation/plots/metrics/eval/loss.tsv: loss
+          dvclive/plots/metrics/train/loss.tsv: loss
+          dvclive/plots/metrics/eval/loss.tsv: loss
     - accuracy:
         y:
-          evaluation/plots/metrics/train/accuracy.tsv: accuracy
-          evaluation/plots/metrics/eval/accuracy.tsv: accuracy
+          dvclive/plots/metrics/train/accuracy.tsv: accuracy
+          dvclive/plots/metrics/eval/accuracy.tsv: accuracy
 metrics:
-    - evaluation/metrics.json
+    - dvclive/metrics.json
 params:
     - params.yaml
 stages:
@@ -23,7 +23,7 @@ stages:
     - params.yaml
     outs:
     - model
-    - evaluation:
+    - dvclive:
         cache: false
   inference:
     cmd: python inference.py data/

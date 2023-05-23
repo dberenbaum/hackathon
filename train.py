@@ -74,7 +74,7 @@ if __name__ == "__main__":
         save_weights_only=True,
     )
 
-    with Live(dir="evaluation", report=None, dvcyaml=False) as live:
+    with Live(dir="dvclive", report=None, dvcyaml=False) as live:
         loss_0, acc_0 = model.evaluate(valid)
         live.summary["loss_0"] = loss_0
         live.summary["acc_0"] = acc_0
